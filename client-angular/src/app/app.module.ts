@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { PicoBizRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CustomerListComponent } from './customers/customer-list/customer-list.component';
+import { CustomerDetailComponent } from './customers/customer-detail/customer-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    CustomerDetailComponent
   ],
   imports: [
     BrowserModule,
