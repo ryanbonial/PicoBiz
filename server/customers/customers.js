@@ -10,4 +10,6 @@ module.exports.create = newCustomer => {
   return newCustomer;
 };
 
+module.exports.clear = id => db.customerDb.clear();
+
 module.exports.loadMockData = () => db.customerDb.insert(mockCustomers);

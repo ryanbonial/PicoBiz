@@ -22,4 +22,11 @@ customersController.loadMockConfig = {
   }
 };
 
+customersController.clearAllData = {
+  handler: function(req, reply) {
+    customerDb.clear();
+    return reply({success: true});
+  }
+};
+
 module.exports = customersController;

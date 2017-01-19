@@ -9,13 +9,15 @@ import { PicoBizRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CustomerListComponent } from './customers/customer-list/customer-list.component';
 import { CustomerDetailComponent } from './customers/customer-detail/customer-detail.component';
+import { SettingsComponent } from './settings/settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CustomerListComponent,
-    CustomerDetailComponent
+    CustomerDetailComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

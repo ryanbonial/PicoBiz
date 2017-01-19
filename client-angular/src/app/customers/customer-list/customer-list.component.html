@@ -2,7 +2,11 @@
   <li class="breadcrumb-item active">Customers</li>
 </ol>
 <div class="container">
-    <table class="table">
+    <ngb-alert type="danger" [dismissible]="false" *ngIf="errorMsg">
+      <strong>Error</strong> {{errorMsg}}
+    </ngb-alert>
+
+    <table class="table" *ngIf="!loading && !errorMsg">
       <thead class="thead-inverse">
         <tr>
           <th>#</th>

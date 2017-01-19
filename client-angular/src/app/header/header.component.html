@@ -2,13 +2,14 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" [routerLink]="['/']">
     <img src="/assets/mountain.png" width="30" height="30" class="d-inline-block align-top" alt="">
     PicoBiz
   </a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Customers</a>
+      <a class="nav-item nav-link active" [routerLink]="['/Customers']">Customers</a>
+      <a class="nav-item nav-link active" [routerLink]="['/Settings']">Settings</a>
     </div>
   </div>
 </nav>

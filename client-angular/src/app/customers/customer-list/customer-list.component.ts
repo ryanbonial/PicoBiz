@@ -11,12 +11,18 @@ import { CustomersService } from './../customers.service';
 })
 export class CustomerListComponent implements OnInit {
   customerList: Array<any>;
+  loading: boolean;
+  errorMsg: string;
 
   constructor(private customersService: CustomersService, private router: Router) { }
 
   ngOnInit() {
+    this.loading = true;
     this.customersService.getAll()
-      .subscribe(customers => this.customerList = customers)
+      .finally(() => this.loading = false)
+      .subscribe(
+        customers => this.customerList = customers,
+        error => this.errorMsg = error.status + ' ' + error.statusText)
   }
 
   routeToCustomerDetail(id: string) {

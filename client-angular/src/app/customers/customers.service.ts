@@ -20,6 +20,19 @@ export class CustomersService {
       .catch(this.handleError);
   }
 
+  loadMock() {
+    return this.http.get('http://localhost:3000/api/loadMockCustomers')
+      .map(resp => resp.json())
+      .catch(this.handleError);
+  }
+
+  clearAll() {
+    return this.http.get('http://localhost:3000/api/clearAllCustomers')
+      .map(resp => resp.json())
+      .catch(this.handleError);
+  }
+
+
   private handleError = (error: any): Promise<any> => {
     console.log(error);
     return Promise.reject(error);
