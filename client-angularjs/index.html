@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="picoBiz">
+<head>
+	<title>PicoBiz</title>
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-brand">
+					<a href="#!/Customers">
+						<img src="/assets/mountain.png" width="30" height="30" alt=""> PicoBiz
+					</a>
+				</div>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse pull-right">
+				<ul class="nav navbar-nav">
+					<li><a href="#!/Customers">Customers</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+
+	</nav>
+
+	<div ng-view></div>
+</body>
+
+<!-- 3rd Party scripts -->
+<script src="/node_modules/angular/angular.js"></script>
+<script src="/node_modules/angular-route/angular-route.js"></script>
+
+<!-- App scripts -->
+<script src="/app/app.js"></script>
+<script src="/app/app.routes.js"></script>
+<script src="/app/customers/customers.service.js"></script>
+<script src="/app/customers/customer-list/customer-list.controller.js"></script>
+<script src="/app/customers/customer-detail/customer-detail.controller.js"></script>
+
+</html>

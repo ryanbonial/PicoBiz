@@ -9,25 +9,25 @@ export class CustomersService {
   constructor(private http: Http) { }
 
   getAll() {
-    return this.http.get('http://localhost:3000/api/customers')
+    return this.http.get('http://localhost:3030/api/customers')
       .map(resp => resp.json())
       .catch(this.handleError);
   }
 
   get(id: string) {
-    return this.http.get(`http://localhost:3000/api/customers/${id}`)
+    return this.http.get(`http://localhost:3030/api/customers/${id}`)
       .map(resp => resp.json())
       .catch(this.handleError);
   }
 
   loadMock() {
-    return this.http.get('http://localhost:3000/api/loadMockCustomers')
+    return this.http.get('http://localhost:3030/api/loadMockCustomers')
       .map(resp => resp.json())
       .catch(this.handleError);
   }
 
   clearAll() {
-    return this.http.get('http://localhost:3000/api/clearAllCustomers')
+    return this.http.get('http://localhost:3030/api/clearAllCustomers')
       .map(resp => resp.json())
       .catch(this.handleError);
   }

@@ -5,7 +5,7 @@ const server = new Hapi.Server({
 	connections: { router: { isCaseSensitive: false }, routes: { cors: true } }
 });
 
-server.connection({ port: 3000 });
+server.connection({ port: 3030 });
 
 server.route(routes);
 

@@ -1,0 +1,27 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active">Customers</li>
+</ol>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead class="thead-inverse">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="pointer"  ng-repeat="customer in vm.customers">
+        <td>{{customer.$loki}}</td>
+        <td><a href="#!/Customers/{{customer.$loki}}">{{customer.name}}</a></td>
+        <td>
+          {{customer.address}}<br>
+          {{customer.city}}, {{customer.state}} {{customer.postalCode}}
+        </td>
+        <td>{{customer.url}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

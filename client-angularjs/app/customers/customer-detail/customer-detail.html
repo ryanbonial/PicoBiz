@@ -1,0 +1,18 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#!/Customers">Customers</a></li>
+  <li class="breadcrumb-item active">#{{vm.customer.$loki}}</li>
+</ol>
+
+<div class="container">
+
+  <h1>{{vm.customer.name}}</h1>
+  <p>
+    {{vm.customer.address}}<br>
+    {{vm.customer.city}}, {{vm.customer.state}} {{vm.customer.postalCode}}<br>
+    <a ng-href="{{vm.getGoogleMapsUrl()}}" target="_maps" rel="noopener">View in maps</a>
+  </p>
+  <p>
+    <a href="{{vm.customer.url}}" target="_blank" rel="noopener">{{vm.customer.url}}</a>
+  </p>
+
+</div>
