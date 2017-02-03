@@ -3,13 +3,15 @@
   <li class="breadcrumb-item active">#{{customer.$loki}}</li>
 </ol>
 
-<h1>{{customer.name}}</h1>
-<p>
-  {{customer.address}}<br>
-  {{customer.city}}, {{customer.state}} {{customer.postalCode}}<br>
-  <a href="https://www.google.com/maps/search/{{customer.address}}+{{customer.city}}+{{customer.state}}+{{customer.postalCode}}" target="_maps" rel="noopener">View in maps</a>
-</p>
-<p>
-  <a href="{{customer.url}}" target="_blank" rel="noopener">{{customer.url}}</a>
-</p>
+<div class="container">
+  <h1>{{customer.name}}</h1>
+  <p>
+    {{customer.address}}<br>
+    {{customer.city}}, {{customer.state}} {{customer.postalCode}}<br>
+    <a href="https://www.google.com/maps/search/{{customer.address}}+{{customer.city}}+{{customer.state}}+{{customer.postalCode}}" target="_maps" rel="noopener">View in maps</a>
+  </p>
+  <p>
+    <a href="{{customer.url}}" target="_blank" rel="noopener">{{customer.url}}</a>
+  </p>
+</div>
 

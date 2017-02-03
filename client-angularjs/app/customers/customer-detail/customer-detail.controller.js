@@ -9,6 +9,7 @@ function CustomerDetailController(CustomersService, $routeParams){
   var vm = this;
   vm.customer = {};
   vm.getGoogleMapsUrl = getGoogleMapsUrl;
+  vm.error = '';
 
   onInit();
 
@@ -17,6 +18,9 @@ function CustomerDetailController(CustomersService, $routeParams){
     CustomersService.getCustomer($routeParams.id)
       .then(function(customer){
         vm.customer = customer;
+      },
+      function(error){
+        vm.error = error;
       });
   }
 
