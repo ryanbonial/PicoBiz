@@ -39,6 +39,13 @@ describe('CustomerDetailController', function() {
       expect(vm.customer).toEqual(mockCustomer);
     });
 
+     it('Should set vm.error to a server connection error is status is -1', function() {
+      var error = { status: -1 };
+      deferred.reject(error);
+      $scope.$digest();
+      expect(vm.error).toEqual('Unable to connect to server, most likely the server is not running');
+    });
+
     it('Should set vm.error if getCustomer fails', function() {
       var error = 'something errorful happened';
       deferred.reject(error);

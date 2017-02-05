@@ -3,6 +3,10 @@
 </ol>
 
 <div class="container">
+  <div class="alert alert-danger" role="alert" ng-if="vm.error">
+    <strong>Error</strong> {{vm.error}}
+  </div>
+
   <table class="table table-striped">
     <thead class="thead-inverse">
       <tr>

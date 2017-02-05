@@ -15,8 +15,6 @@ function CustomersService($http, ApiServerUrl){
     return $http.get(ApiServerUrl + 'customers')
       .then(function(resp) {
         return resp.data;
-      }, function(error) {
-        console.log(error);
       });
   }
 
@@ -24,8 +22,6 @@ function CustomersService($http, ApiServerUrl){
     return $http.get(ApiServerUrl + 'customers/' + id)
       .then(function(resp) {
         return resp.data;
-      }, function(error) {
-        console.log(error);
       });
   }
 }

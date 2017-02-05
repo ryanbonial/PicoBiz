@@ -3,7 +3,11 @@
   <li class="breadcrumb-item active">#{{vm.customer.$loki}}</li>
 </ol>
 
+
 <div class="container">
+  <div class="alert alert-danger" role="alert" ng-if="vm.error">
+    <strong>Error</strong> {{vm.error}}
+  </div>
 
   <h1>{{vm.customer.name}}</h1>
   <p>
@@ -14,5 +18,4 @@
   <p>
     <a href="{{vm.customer.url}}" target="_blank" rel="noopener">{{vm.customer.url}}</a>
   </p>
-
 </div>
