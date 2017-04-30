@@ -6,7 +6,7 @@ const dbOptions = {
 	autosave: true,
 	autosaveInterval: 10000 // 10 seconds
 };
-const db = new loki('picoBiz.db', dbOptions);
+const db = new loki('../db/picoBiz.db', dbOptions);
 
 function onDbLoaded() {
 	console.log('Database Loaded')
